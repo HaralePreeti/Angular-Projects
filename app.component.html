@@ -1,35 +1,32 @@
-<div class="container-fluid bg-gradient bg-info text-white text-center p-2">
-  <h2>Template Driven Form In Angular</h2>
+<!-- Attributes Directives -->
+<!-- <div class="header">
+  <h2>Angular Attributes Directives</h2>
 </div>
-<form #myForm="ngForm" (ngSubmit)="onSubmit(myForm.value)">
+<div class="search">
+  <input type="text" [(ngModel)]="search" placeholder="search for anything">
+  <button class=".enabled-button"
+  [disabled]="!search"
+  [ngClass]="{'enabled-button':search,'disabled-button':!search}">Search</button>
+</div>
+<p>Search For:{{search}}</p>
+
 <div class="container">
-  <div class="mb-3">
-    <label class="form-lable">FirstName</label>
-    <input type="text" class="form-control" placeholder="eg.Jhon" name="firstname" ngModel>
-  </div>
-  <div class="mb-3">
-    <label class="form-lable">LastName</label>
-    <input type="text" class="form-control" placeholder="eg.Sharma" name="lastname" ngModel>
-  </div>
-  <div class="mb-3">
-    <label class="form-lable">Roll No</label>
-    <input type="number" class="form-control" placeholder="eg.401" name="rollno" ngModel>
-  </div>
-  <div class="mb-3">
-    <label class="form-lable">Branch</label>
-    <input type="text" class="form-control" placeholder="eg.CSE" name="branch" ngModel>
-  </div>
-  <div class="mb-3">
-    <label class="form-lable">Email</label>
-    <input type="email" class="form-control" placeholder="eg.Jhon@gmail.com" name="emailadd" ngModel>
-  </div>
-  <div class="mb-3">
-    <label class="form-lable">Password</label>
-    <input type="password" class="form-control" placeholder="password" name="Password" ngModel>
-  </div>
-  <div class="mb-3 flex d-flex gap-2">
-    <button class="btn btn-primary col-6" type="submit">Submit</button>
-    <button class="btn btn-danger col-6" type="clear">Clear</button>
+</div> -->
+<h2>Attributes Directives</h2>
+<div class="container">
+  <div class="card" *ngFor="let p of products">  
+    <img src="{{p.image}}">
+    <h3>{{p.name}}</h3>
+    <div class="desc">
+      <p class="mrp">MRP. 25000.00</p>
+      <p [ngStyle]="{'background-color':isAvailable? 'green':'red','color':'white'}"
+      style="padding: 5px;"
+      >{{p.isAvailable?:'Available':'Not Available'}}</p>
+      <div class="desc">
+        <p>MRP. 25000.00</p>
+        <button
+        [ngClass]="{'add-to-card':p.isAvailable,'not-working':!p.isAvailable}"
+        >Add to card</button>
+    </div>
   </div>
 </div>
-</form>

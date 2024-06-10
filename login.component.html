@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="title">
+        <h2>Welcome to OnlineTech</h2>
+        <p>provide your credentails to login</p>
+    </div>
+    <form [formGroup]="fb" (ngSubmit)="onLogin()">
+        <input type="email" fromControlName="username" placeholder="Username">
+        <input type="password" fromControlName="password" placeholder="Password">
+        <input class="submit" type="submit" value="Login">
+    </form>
+    <div class="link">
+        <a routerLink="../forget-password"><span>Forget Password</span></a>
+        <a routerLink="../register">Click here to <span>Register</span></a>
+    </div>
+</div>

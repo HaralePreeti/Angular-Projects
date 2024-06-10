@@ -1,0 +1,45 @@
+.panel{
+    width:100%;
+    height:100%;  
+   
+}
+.panel .contain{
+    width:100%;
+    padding:10px;
+   box-shadow: 0px 0px 7px black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: black;
+    
+}
+
+.contain .brand{
+    font-size: 18px;
+    font-style: italic;
+    color:white;
+    margin-left: 30px;
+}
+.contain .brand span{
+    color:orange;
+}
+.contain .brand span:hover{
+    color:blueviolet;
+    cursor: pointer;
+}
+.contain .nav{
+    padding:10px;
+    color:white;
+   
+}
+.contain .nav a{
+  margin:20px;
+  font-size: 18px;
+  text-decoration: none;
+  color:white;
+  
+}
+.contain .nav a:hover{
+    color:orange;
+    cursor: pointer;
+}

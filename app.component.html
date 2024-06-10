@@ -1,51 +1,35 @@
- <!-- <div class="header">
-  <div class="brand">
-    <h3>Logo</h3>
-  </div>
-  <div class="nav">
-    <a href="#">Home</a>
-    <a href="#">Services</a>
-    <a href="#">About</a>
-    <a href="#">Products</a>
-    <a href="#">Contact</a>
-
-  </div>
-</div>  -->
-<!-- One Way binding in Angular  -->
-<!-- <div class="header">
-  <h3>{{heading}}</h3>
+<div class="container-fluid bg-gradient bg-info text-white text-center p-2">
+  <h2>Template Driven Form In Angular</h2>
 </div>
+<form #myForm="ngForm" (ngSubmit)="onSubmit(myForm.value)">
 <div class="container">
-  <div class="row">
-    String Interpolation 
-     <img src="{{images[0]}}" alt=""> 
+  <div class="mb-3">
+    <label class="form-lable">FirstName</label>
+    <input type="text" class="form-control" placeholder="eg.Jhon" name="firstname" ngModel>
   </div>
-  <div class="row">
-    Property binding
-    <img [src]="images[1]" alt="">
+  <div class="mb-3">
+    <label class="form-lable">LastName</label>
+    <input type="text" class="form-control" placeholder="eg.Sharma" name="lastname" ngModel>
   </div>
-  <div class="row">
-    Property binding
-    <img [src]="images[2]" alt="">
+  <div class="mb-3">
+    <label class="form-lable">Roll No</label>
+    <input type="number" class="form-control" placeholder="eg.401" name="rollno" ngModel>
+  </div>
+  <div class="mb-3">
+    <label class="form-lable">Branch</label>
+    <input type="text" class="form-control" placeholder="eg.CSE" name="branch" ngModel>
+  </div>
+  <div class="mb-3">
+    <label class="form-lable">Email</label>
+    <input type="email" class="form-control" placeholder="eg.Jhon@gmail.com" name="emailadd" ngModel>
+  </div>
+  <div class="mb-3">
+    <label class="form-lable">Password</label>
+    <input type="password" class="form-control" placeholder="password" name="Password" ngModel>
+  </div>
+  <div class="mb-3 flex d-flex gap-2">
+    <button class="btn btn-primary col-6" type="submit">Submit</button>
+    <button class="btn btn-danger col-6" type="clear">Clear</button>
   </div>
 </div>
-<div class="container" style="height: 100px;">
-  <button (click)="action1()" [disabled]="button1">{{btn1}}</button>
-  <button (click)="action2()" [disabled]="button2">{{btn2}}</button>
-  <button (click)="action3()" [disabled]="button3">{{btn3}}</button>
-  <p>{{result}}</p>
-</div> -->
-
-<!-- Two Way binding in Angular -->
-<!-- <div class="container" style="height: 100px;">
-  <input type="text" name="inputText" [(ngModel)]="inputText" placeholder="Enter Information">
-  <p>{{inputText}}</p>
-</div>
-<div class="container" style="height: 100px;">
-  <input type="text" #userInput placeholder="Enter Information">
-  <button (click)="userClick(userInput.value)">Show Data</button>
-  <p>{{inputText1}}</p>
-</div> -->
-
-<!-- Angular Dirctives -->
-<app-ngstyle></app-ngstyle>
+</form>
